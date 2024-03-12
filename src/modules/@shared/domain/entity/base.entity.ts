@@ -1,4 +1,4 @@
-import Id from "../value-object/id.value-object";
+import Id from '../value-object/id.value-object';
 
 export default class BaseEntity {
   private _id: Id;
@@ -6,7 +6,7 @@ export default class BaseEntity {
   private _updatedAt: Date;
 
   constructor(id?: Id) {
-    this._id = id;
+    this._id = id || new Id();
     this._createdAt = new Date();
     this._updatedAt = new Date();
   }
